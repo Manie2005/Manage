@@ -5,7 +5,7 @@ import { Repository } from 'typeorm';
 import { InjectRepository } from '@nestjs/typeorm';
 import * as argon2 from 'argon2'
 import { JwtService } from '@nestjs/jwt';
-import { LoginDto } from 'src/dto/loginDto.dto';
+import { LoginDto } from 'src/dto/LoginDto.dto';
 import { Response,Request } from 'express';
 
 @Injectable()
