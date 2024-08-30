@@ -5,7 +5,7 @@ import {Request, Response} from 'express'
 import { AuthGuard } from '@nestjs/passport';
 import { RolesGuard } from 'src/guard/role.guard';
 import { Roles } from 'src/guard/role';
-import { LoginDto } from 'src/dto/LoginDto.dto';
+
 
 @Controller('user')
 export class UserController {
@@ -16,11 +16,7 @@ export class UserController {
     return this.userService.create(createUserDto);
   }
 
-  @Post('login')
-  login(@Body() payload:LoginDto, @Req() req:Request, @Res()res:Response) {
-    return this.userService.signIn(payload,req,res);
-  }
-
+  
   @Post('logout')
   logout(@Req() req:Request, @Res() res:Response){
     return this.userService.logout(req,res)
