@@ -10,9 +10,10 @@ import { JWTStrategy } from 'src/jwt-strategy/jwt-strategy';
 dotenv.config()
 
 @Module({
-  imports:[UserModule,TypeOrmModule.forFeature([User]),JwtModule.register({
+  imports:[UserModule,TypeOrmModule.forFeature([User]),
+  JwtModule.register({
     global:true,
-    secret:process.env.SECRET,
+    secret:process.env.JWT_SECRET,
     signOptions:{expiresIn:'1h'},
 
   }),
