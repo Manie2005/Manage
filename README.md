@@ -71,3 +71,7 @@ Nest is an MIT-licensed open source project. It can grow thanks to the sponsors 
 ## License
 
 Nest is [MIT licensed](LICENSE).
+Assignment
+in your mgt system you should map the relationships that exist using erd diagram
+also draw a flowchart about the mgt system 
+https://nest-js-1.onrender.com/api/v1/user/one

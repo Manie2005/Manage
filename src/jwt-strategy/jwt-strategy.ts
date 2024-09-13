@@ -10,7 +10,7 @@ export class JWTStrategy extends PassportStrategy(Strategy, 'jwt') {
     constructor(
         private readonly userService: UserService,
         private readonly configService: ConfigService // Inject ConfigService
-    ) {
+    ) {4
         super({
             jwtFromRequest: ExtractJwt.fromAuthHeaderAsBearerToken(),
             ignoreExpiration: false,
